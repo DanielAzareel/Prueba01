@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- script de A-Frane version1 1.0.0 -->
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <!-- script de AR.JS con soporte de marker + location -->
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    </head>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false;">
+            <a-assets>
+                <!--                
+
+                -->
+                
+                <a-assets-item id="mustangObj" src="modelos/mustang/mustang_GT.obj"></a-assets-item>
+                <a-assets-item id="mustangMtl" src="modelos/mustang/mustang_GT.mtl"></a-assets-item>
+            </a-assets>
+            <a-marker preset="hiro">
+                <!--<a-sphere position="0 0 0" radius="0.6" color="#EF2D5E"></a-sphere>
+                -->
+
+                <a-entity obj-model="obj: #mustangObj; mtl: #mustangMtl" scale="0.01 0.01 0.01" rotation="0 180 30"></a-entity>
+            </a-marker>
+
+            <!-- SEGUNDO MARCADOR
+            -->
+
+
+            <a-assets>
+                
+                <a-assets-item id="audiObj" src="modelos/R8/Audi_R8_2017.obj"></a-assets-item>
+                <a-assets-item id="audiMtl" src="modelos/R8/Audi_R8_2017.mtl"></a-assets-item>
+            </a-assets>
+            <a-marker preset="kanji">
+                <!--<a-sphere position="0 0 0" radius="0.6" color="#EF2D5E"></a-sphere>
+                -->
+
+                <a-entity obj-model="obj: #audiObj; mtl: #audiMtl" scale="0.1 0.1 0.1" rotation="270 0 -30"></a-entity>
+            </a-marker>
+
+
+
+
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
